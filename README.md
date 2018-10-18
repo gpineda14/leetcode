@@ -1,6 +1,6 @@
-# LeetCode Problems #
+# Tackling LeetCode Problems #
 
-*In preparation for upcoming technical interview, I decided to document the problems I try to solve on Leetcode.com*
+**In preparation for upcoming technical interview, I decided to document the problems I try to solve on Leetcode.com**
 
 Each folder will contain:
 
