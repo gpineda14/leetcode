@@ -1,0 +1,21 @@
+3.1 Three in One
+
+Can be generalized to N Stacks 
+
+consider special case, N = 1
+
+s = [0, 0, 0, 0, 0];
+capacity is size of array 
+ptr = 0;
+
+when we push to stack, then we just increment and set to new value
+when we pop from stack, we decrement if curr ptr is 0, and then set to 0;
+
+N = 2
+s = [0, 0, 0, 0, 0, 0]
+two ptrs: one in front, other at the end
+
+N = 3
+s = [0, 0, 0, 0, 0, 0]
+
+Use array
