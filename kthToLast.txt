@@ -1,0 +1,62 @@
+2.2 Return Kth to Last 
+
+input:
+1 -> 2 -> 3-> 5 -> 6, 2
+output:
+5 -> 6
+
+input: 
+5 -> 5 -> 6 -> 7 -> 8 -> 10, 4
+output:
+6 -> 7 -> 8 -> 10
+
+input:
+5 -> 5 -> 6 -> 7 -> 8 -> 10, 7
+output:
+5 -> 5 -> 6 -> 7 -> 8 -> 10
+
+1. Find length of the whole linked list
+2. subtract length - n
+3. new value is how many times we need to iterate through the linked list 
+4. return ptr, not original list 
+
+function kthToLast(list, n) {
+	if (!list) {
+		return list;
+	}
+	let cPtr = list.head;
+	let iPtr = list.head;
+	let size = 0;
+	while (cPtr != null) {
+		size++;
+		cPtr = cPtr.next;
+	}
+
+	size = size - n;
+	while (size > 1) {
+		iPtr = iPtr.next;
+		size--;
+	}
+	return iPtr;
+}
+
+Time Complexity: O(n)
+
+Solve Recursively 
+
+Return Kth element
+
+1. trivial to find kth element recursively
+
+function kthElem(list, n) {
+	if (n == 1) {
+		return list;
+	}
+	return kthElem(list.next, n - 1);
+}
+
+
+
+1 -> 2 -> 3 -> 5 -> 6, 2
+
+
