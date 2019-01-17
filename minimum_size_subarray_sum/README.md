@@ -47,3 +47,17 @@ return 2
   - if start > sum,
     - get the min of count and global_min
 4. return global_min
+
+## Refactor ##
+
+We create a couple variable:
+- n = len(nums)
+- min_len = sys.maxsize (to keep track of min)
+- left = 0, index of start of subarray
+- sum = 0, total sum of array elements
+
+We first iterate through the array elements adding every element to the sum variable.
+
+In a nested loop, while sum >= s, we get compare min_len and i + 1 - left and set the smaller one to min_len. Afterwards we subtract nums[left] from sum and increment left.
+
+Afterwards we return the min_len if min_len does not equal to sys.maxsize, else we return 0.
